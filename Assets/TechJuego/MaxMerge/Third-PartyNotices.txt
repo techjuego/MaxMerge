@@ -1,0 +1,20 @@
+2048 Merge is governed by the Asset Store EULA; however, the following components are governed by the licenses indicated below:
+
+A. Music
+    - Assets/TechJuego/PlanetMerge/Audio/Music/Relaxation Music.mp3
+    - License details available in https://freesound.org/s/521233/ 
+
+    - Assets/TechJuego/PlanetMerge/Audio/Effect/Blip.wav
+    - License details available in https://freesound.org/s/757175/
+
+    - Assets/TechJuego/PlanetMerge/Audio/Effect/Points.ogg
+    - License details available in https://freesound.org/s/745022/ 
+
+B. TextMesh Pro asset 
+    - Asset Store EULA
+    - License details available here: https://unity3d.com/es/legal/as_terms
+
+C. Cal Sans Font
+    - Assets/PlanetMerge/Fonts
+    - License details available here: https://fonts.google.com/specimen/Cal+Sans/license
+

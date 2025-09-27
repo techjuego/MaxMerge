@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using TechJuego.MaxMerge.Monetization;
+using TechJuego.MaxMerge.Rateus;
+using UnityEngine;
+namespace TechJuego.MaxMerge
+{
+    public class GameStateHandler : Singleton<GameStateHandler>
+    {
+        protected GameStateHandler() { }
+        private GameState GameState;
+        public GameState m_GameState
+        {
+            get { return GameState; }
+            set
+            {
+                GameState = value;
+                switch (value)
+                {
+                    case GameState.None:
+                        break;
+                    case GameState.GameOver:
+                        GameEvents.OnGameEnd?.Invoke();
+                        break;
+                    case GameState.InGameSetting:
+                        break;
+                    case GameState.InProgress:
+                        break;
+                    case GameState.PrivacyPolicy:
+                        break;
+                }
+                AdsHandler.Instance.ShowAds(value);
+#if UNITY_ANDROID || UNITY_IPHONE
+                RateusHandler.Instance.ShowRateus(value);
+#endif
+            }
+        }
+    }
+}

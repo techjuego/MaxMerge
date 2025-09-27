@@ -1,0 +1,23 @@
+﻿using TechJuego.MaxMerge.Monetization;
+using TechJuego.MaxMerge.Sound;
+using TechJuego.MaxMerge.Utils;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+namespace TechJuego.MaxMerge
+{
+    public class HomePanel : MonoBehaviour
+    {
+        [SerializeField] private Button m_PlayButton;
+        private void OnEnable()
+        {
+            UiUtility.SetButton(m_PlayButton, OnClickPlayButton);
+        }
+        private void OnClickPlayButton()
+        {
+            SoundEvents.OnPlaySingleShotSound?.Invoke("Click");
+            AdsHandler.Instance.HideBanner();
+            SceneLoader.LoadScene("Game", GameColors.Color1(), 2, ChangeEffect.BottomFill);
+        }
+    }
+}
